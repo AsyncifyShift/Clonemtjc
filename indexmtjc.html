@@ -1,0 +1,820 @@
+<! DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    
+        <title>Animation</title>
+        <style type="text/css" media="all">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #dce7ed;
+        }
+        
+        
+        .Announcement-bar {
+            background-color: #446607;
+            padding: 6px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            overflow: hidden;
+            border-bottom: 3px solid #ffcc00;
+        }
+        
+        .Announcement-label {
+            background-color: #ffeb3b;
+            border-radius: 16px ;
+            font-weight: bold;
+            font-size: 30px;
+            padding: 5px 10px;
+        }
+        
+        .Announcement-box {
+            overflow: hidden;
+            
+        }
+        
+        .Announcement-text {
+            font-weight: 600;
+            font-size: 22px;
+            color: white;
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: animation-text 18s linear infinite;
+        }
+        
+        @keyframes animation-text {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        
+        .navigation-bar {
+            background-color: #446607;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 15px;
+            gap: 6px;
+            border-bottom: 3px solid #ffcc00;
+        }
+        
+        .logo-nav{
+            display: flex;
+            gap: 5px;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        
+        .nav-text {
+            color: #ffebc2;
+            font-size: 22px;
+        }
+        
+        .slogan {
+            font-size: 14px;
+            font-weight: 600;
+            color: #00fffa;
+        }
+        
+        li {
+            display: inline;
+            margin: 8px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #ffebc2;
+        }
+        
+        a:hover {
+            text-decoration: underline #ffebc2;
+        }
+        
+        .slide-container {
+            width: 100%;
+            border-bottom: 2px solid black;
+            overflow: hidden;
+        }
+        
+        .slider{
+            width: 400%;
+            display: flex;
+            gap: 2px;
+            animation: image-animation 15s ease-in-out infinite;
+        }
+        
+        .image {
+            width: 25%;
+            
+        }
+        
+        .slide-image {
+            object-fit: cover;
+            display: block;
+            width: 100%;
+            height: 1200px;
+        }
+        
+        @keyframes image-animation {
+            0%{
+                transform: translateX(0);
+            }
+            10%{
+                transform: translateX(0%);
+            }
+            25%{
+                transform: translateX(-25%);
+            }
+            40%{
+                transform: translateX(-25%);
+            }
+            50%{
+                transform: translateX(-50%);
+            }
+            65%{
+                transform: translateX(-50%);
+            }
+            75%{
+                transform: translateX(-75%);
+            }
+            90%{
+                transform: translateX(-75%);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        
+        .welcome-section{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .welcome-container {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 15px;
+            width: 90%;
+            box-shadow: 0 0 5px 2px black;
+        }
+        
+        .welcome-title {
+            padding: 4px;
+            text-decoration: underline;
+            color: darkblue;
+            font-size: 34px;
+            font-weight: bold;
+        }
+        
+        p {
+            font-size: 20px;
+            font-weight: 500;
+            padding: 4px 0;
+        }
+        
+        .highlight {
+            color:#004cdb;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 2px 0;
+        }
+        
+        .info-section {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .info-container {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 15px;
+            width: 90%;
+            box-shadow: 0 0 5px 2px black;
+        }
+        
+        
+        .info-box{
+            box-shadow: 0 0 5px 2px black;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .mentor-image-box{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .mentor-image{
+            width: 50%;
+            height: auto;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+        
+        .mentor-name {
+            font-size: 26px;
+            color: darkblue;
+        }
+        
+        /*--- standard-section --*/
+        
+        .standard-section{
+            background-color: #c8def7;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .standard-container{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .acadmic-image{
+            width: 30%;
+            height: auto;
+            object-fit: fill;
+        }
+        
+        .standard-box{
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .box {
+            width: 428px;
+            height: 394px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            box-shadow: 0 0 3px 1px black;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .standard-image{
+            width: 388px;
+            height: 320px;
+            margin-top: 5px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 2px 1px black;
+        }
+        
+        .standard-text{
+            margin: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            color: darkblue;
+        }
+        
+        /*-- Award-section --*/
+        
+        .award-section{
+            padding: 10px;
+            background: #d5e5f7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .award-container{
+            width: 90%;
+            display: flex;
+            overflow: hidden;
+        }
+        
+        .award-image-box{
+            width: 400%;
+            margin-top: 10px;
+            display: flex;
+            padding-right: 20px;
+            gap: 20px;
+            animation: award-slider 15s linear infinite;
+        }
+        
+        .award-image{
+            width: 230px;
+            display: block;
+            height: auto;
+            object-fit: cover;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+        
+        .award-title{
+            color: darkblue;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px;
+        }
+        
+        @keyframes award-slider {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+        
+        /* --- Ranker-SSC --- */
+        
+        .ssc-banner{
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            
+        }
+        
+        .banner{
+            width: 90%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 0 8px 2px black;
+        }
+        
+        /* --- Rankers --- */
+        
+        .ssc-ranker-section {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .ssc-ranker-container{
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+        
+        .ranker-box{
+            width: 90%;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .ranker-image-box {
+            background-color: #001621;
+            width: 330px;
+            height: 290px;
+            padding: 5px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .ranker-image-bg{
+            width: 80%;
+            padding: 5px;
+            background-color: #ff4103;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .ranker-image {
+            width: 60%;
+            height: auto;
+            object-fit: fill;
+            border-radius: 16px;
+        }
+        
+        .ranker-name {
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+            margin: 5px;
+        }
+        
+        .ranker-percentage {
+            font-size: 22px;
+            font-weight: 500;
+            color: #00fffa;
+        }
+        
+        .ranker-year {
+            font-size: 32px;
+            color: #005dff;
+            font-weight: bold;
+        }
+        
+        /* --- HSC Section --- */
+        .HSC-section{
+            background-color: #cfedff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+        .HSC-image{
+            width: 100%;
+            height: auto;
+            border-radius: 22px;
+        }
+        
+        /* Detail */
+        
+        .detail-section{
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .detail-container{
+            background-color: #00e3ff;
+            border-radius: 8px;
+            width: 90%;
+            padding: 30px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            animation: scrollanimation-1 both;
+            animation-timeline: view();
+            animation-range: entry 25%, exit;
+        }
+        
+        .detail-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .h-detail-text{
+            color: red;
+            font-weight: bold;
+            font-size: 40px;
+        }
+        
+        .p-detail-text{
+            color: red;
+            font-size: 14px;
+        }
+        
+        /* --- footer --- */
+        
+        .footer-section{
+            background-color: #446607;
+            padding: 30px;
+        }
+        
+        .footer-container{
+            display: flex;
+            gap: 30px;
+        }
+        
+        .footer-text{
+            max-width: 250px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        
+        .h-text-footer{
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .p-text-footer{
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+        }
+        
+        .a-footer {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        /* --- Scroll animation --- */
+        
+        .scroll {
+            animation: scrollanimation both;
+            animation-timeline: view();
+            animation-range: entry 20%, exit;
+        }
+
+        
+        @keyframes scrollanimation {
+            from{
+                opacity: 0;
+                transform: translateY(20px) scale(1);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        /* --- Scroll animation --- */
+        
+        @keyframes scrollanimation-1 {
+            from{
+                transform: scaleX(0);
+            }
+            to{
+                opacity: 1;
+                transform: scaleX(1);
+            }
+        }
+        </style>
+</head>
+<body>
+    <header class="navigation-section">
+    <div class="Announcement-bar">
+        <div class="Announcement-label">Announcement</div>
+        <div class="Announcement-box">
+        <div class="Announcement-text">ADMISSIONS OPEN  FOR THE ACADEMIC YEAR 2026-2027 JR.KG TO VII</div>
+    </div>
+    </div>
+    <nav>
+        <div class="navigation-bar">
+        <div>
+            <div class="logo-nav">
+            <img class="logo" src="https://plain-apac-prod-public.komododecks.com/202607/19/9gJddbzL3tQSnizLsHjq/image.webp" alt="logo" />
+            <div>
+        <h2 class="nav-text">MOTHER TERESSA HIGH SCHOOL AND JUNIOR COLLEGE</h2>
+          <h4 align=center><p class="slogan">"An Affordable Institution For Quality Education"</p></h4>
+          </div>
+          <img class="logo" src="https://cdn.phototourl.com/free/2026-07-19-365f8159-b240-4316-8647-a96de6458ea3.webp" alt="logo" />
+          </div>
+        </div>
+        <div class="ul-container">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li> 
+                <li><a href="#">Courses</a> </li>  
+                <li><a href="#">Annual Day</a></li>
+                <li><a href="#">Junior College</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <!-- Image Slider -->
+        <section>
+        <div class="slide-container">
+        <div class="slider">
+            <div class="image">
+            <img class="slide-image" src="https://cdn.phototourl.com/free/2026-07-19-cd947479-5c61-4943-b896-7c5fddfbeef4.webp">
+            </div>
+            <div class="image">
+            <img class="slide-image" src="https://cdn.phototourl.com/free/2026-07-19-06151567-4227-4d88-8942-079858054d71.webp">
+            </div>
+            <div class="image">
+            <img class="slide-image" src="https://cdn.phototourl.com/free/2026-07-19-bee49b7d-8ea1-4510-9abf-ac60fcfdfac6.webp">
+            </div>
+            <div class="image">
+            <img class="slide-image" src="https://cdn.phototourl.com/free/2026-07-19-00c39664-19e1-4e4f-9d45-658af03a7a69.webp">
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Welcome -->
+    <section class="welcome-section">
+        <div class="welcome-container">
+            <h1 class="welcome-title">Welcome</h1>
+            <p>Mother Teressa High School was established in the year 1983-84.
+      M.T.H.S is recognised by the Maharashtra State Board Of Education.
+      It aims at giving all-round sound education academically, morally,
+      spiritually and culturally. The medium of instruction is strictly English.
+      We ensure you that you can entrust your children in this institution
+      for best guidance in character & morals.</p>
+          <p class="highlight">Knowledge is power is the motto of our school.</p>
+        </div>
+    </section>
+    <!-- Info -->
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-box">
+                <div class="mentor-image-box">
+                    <img class="mentor-image"src="https://cdn.phototourl.com/free/2026-07-19-03e16b2e-2743-4794-9506-ccd4be203f59.webp" alt="" />
+                    </div>
+                <h1 class="mentor-name">Late Amir Khan</h1>
+                <div><p>
+      A mentor is someone who becomes an inspiration and a role model. Education of Mother Teressa High School has a different competition. This is apparent for the kaleidoscope of pictures of the activities and facilities offered. We are not in the mere pursuit of acquiring and assimilating it propagating values which will help our student to be civilized & cultured human beings. It has been my constant endeavour to upgrade my school and watch it attaining greater heights. It has been my constant endeavour to upgrade my school and watch it attaining greater heights. The Principal of Mother Teressa High School is to create minds capable of doing new things, not simply repeating what other generation has done. The focus is on the development of "whole self" which means the School aims at development the three domains: cognitive, affective and psychomotor by organizing various curricular & Co-curricular activities for our children. Regular Guidance & counseling by our school teachers & professionals help the students to modify their behaviors and acquire necessary experiences which will help them to get absorbed in today's competitive world.
+    </p></div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-box">
+                <div class="mentor-image-box">
+                    <img class="mentor-image"src="https://cdn.phototourl.com/free/2026-07-19-91b57cd4-e85f-437d-8096-d0e5a6fd1620.webp" alt="" />
+                    </div>
+                <h1 class="mentor-name">Mrs.Nuzhat Riyaz Khan</h1>
+                <div><p>
+        To the family of Mother Teresa High School and Junior College, As a Trustee, my role is often seen as one of governance and guidance. But in truth, it is first an act of faith  in the transformative power of an education built on a radical premise: that the smallest hands, guided by the right values, can heal the world. My commitment is to steward an institution where the curriculum extends beyond textbooks to include empathy, resilience, and quiet courage. We are not just teaching students to navigate the world; we are nurturing the compassionate leaders who will remake it. This is only possible because of the extraordinary partnership between our inspired faculty, our trusting parents, and our remarkable students. You are the living heart of this mission. Together, let us continue to build a school where knowledge is measured by both its depth and its humanity. With gratitude and shared purpose.
+                </p></div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="info-section">
+        <div class="info-container">
+            <div class="info-box">
+                <div class="mentor-image-box">
+                    <img class="mentor-image"src="https://cdn.phototourl.com/member/2026-07-19-4a094d7c-f85d-4df9-8b5e-c93569116ffe.webp" alt="" />
+                    </div>
+                <h1 class="mentor-name">Dr.Riyaz Amir Khan</h1>
+                <div><p>
+        I believe that education is not merely about textbooks and examinations; it is about nurturing young minds, building character, and inspiring a lifelong passion for learning. As Principal, my vision is to create a safe, inclusive, and dynamic environment where every child feels valued, heard, and empowered to discover their unique potential.
+We strive to develop not just intellectually capable students, but compassionate, responsible individuals who will contribute meaningfully to society. Our dedicated team of educators works tirelessly to ensure that each student receives the guidance, encouragement, and support they need to thrive.
+I firmly believe that a child's success is built on a strong partnership between the school and home. I welcome your involvement, your ideas, and your trust. Together, we can inspire our children to dream big, work hard, and become the best versions of themselves.
+
+We at MTHS follow integrated curriculum of Oxford University Press to make our students become successful in this competitive world.
+
+Thank you for being a part of our school community. I look forward to a wonderful journey ahead.
+                </p></div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="standard-section">
+        <img class="acadmic-image" src="https://cdn.phototourl.com/member/2026-07-19-78edf2ae-2f1b-4cbf-a252-b9e1735ad5ca.webp" alt="acadmic-image" />
+        <div class="standard-container">
+        <div class="standard-box">
+            <div class="box scroll"><img class="standard-image" src="https://cdn.phototourl.com/member/2026-07-19-2d058e4f-9c41-4539-a4d0-5b275191a8fd.webp" alt="" /><p class="standard-text">Pre-Primary</p></div>
+            <div class="box scroll"><img class="standard-image" src="https://cdn.phototourl.com/member/2026-07-19-8bf5b0ed-3b6a-41cf-a7d0-e2c7fe69d0f1.webp" alt="" /><p class="standard-text">Primary</p></div>
+            <div class="box scroll"><img class="standard-image" src="https://cdn.phototourl.com/member/2026-07-19-56813e79-fc99-4170-b542-48e72fdb54da.webp" alt="" /><p class="standard-text">Secondary</p></div>
+            <div class="box scroll"><img class="standard-image" src="https://cdn.phototourl.com/member/2026-07-19-3f5e672e-0d69-4200-82c3-e260fa015b44.webp" alt="" /><p class="standard-text">College</p></div>
+            <div class="box scroll"><img class="standard-image" src="https://cdn.phototourl.com/member/2026-07-19-55d739c1-1073-405f-ad37-22cf586a55b8.webp" alt="" /><p class="standard-text">Event</p></div>
+            <div class="box scroll"><img class="standard-image" src="https://cdn.phototourl.com/member/2026-07-19-c935a99b-e2c0-42da-9bb8-cb4525966b1c.webp" alt="" /><p class="standard-text">Award</p></div>
+            </div>
+        </div>
+    </section>
+    <section class="award-section">
+        <h1 class="award-title">Our Award</h1>
+        <div class="award-container">
+            <div class="award-image-box">
+                <img class="award-image" src="https://cdn.phototourl.com/member/2026-07-19-6b7433d0-afd7-4665-bf78-f1a1cca17902.webp" alt="" />
+                <img class="award-image" src="https://cdn.phototourl.com/member/2026-07-19-e4feccb0-bcf8-4097-8de7-3d11ce2c8419.webp" alt="" />
+                <img class="award-image" src="https://cdn.phototourl.com/member/2026-07-19-68d32793-40a7-4a82-872b-0e0991e4099b.webp" alt="" />
+                <img class="award-image" src="https://cdn.phototourl.com/member/2026-07-19-e3a027f7-2e73-4914-ba84-a35a8e2372da.webp" alt="" />
+            </div>
+            <div area="hidden" class="award-image-box">
+                <img class="award-image" src="https://cdn.phototourl.com/member/2026-07-19-6b7433d0-afd7-4665-bf78-f1a1cca17902.webp" alt="" />
+                <img class="award-image" src="https://cdn.phototourl.com/member/2026-07-19-e4feccb0-bcf8-4097-8de7-3d11ce2c8419.webp" alt="" />
+                <img class="award-image" src="https://cdn.phototourl.com/member/2026-07-19-68d32793-40a7-4a82-872b-0e0991e4099b.webp" alt="" />
+                <img class="award-image" src="https://cdn.phototourl.com/member/2026-07-19-e3a027f7-2e73-4914-ba84-a35a8e2372da.webp" alt="" />
+            </div>
+        </div>
+            <div class="ssc-banner">
+                <img class="banner" src="https://cdn.phototourl.com/member/2026-07-19-76a7da2e-9a41-4b80-a8fd-cf5947a847d9.webp" alt="ssc-rankers" />
+            </div>
+    </section>
+    <section class="ssc-ranker-section">
+        <div class="ranker-year">
+            FYJC-SCIENCE Rankers Year(2025-26)
+        </div>
+        <div class="ssc-ranker-container">
+        <div class="ranker-box">
+            <div class="ranker-image-box scroll">
+                <div class="ranker-image-bg">
+                    <img class="ranker-image" src="" alt="" />
+                    </div>
+                    <h3 class="ranker-name">??? ??? ???</h3>
+                    <p class="ranker-percentage">???</p>
+            </div>
+            <div class="ranker-image-box scroll">      <div class="ranker-image-bg">
+                    <img class="ranker-image" src="images/ranker.jpg" alt="" />
+                    </div>
+                    <h3 class="ranker-name">??? ??? ???</h3>
+                    <p class="ranker-percentage">???</p>
+            </div>
+            <div class="ranker-image-box scroll">      <div class="ranker-image-bg">
+                    <img class="ranker-image" src="images/ranker.jpg" alt="" />
+                    </div>
+                    <h3 class="ranker-name">??? ??? ???</h3>
+                    <p class="ranker-percentage">???</p>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="HSC-section">
+        <div class="HSC-banner">
+            <img class="HSC-image" src="https://cdn.phototourl.com/member/2026-07-19-ec53656f-00a7-4476-9d5f-152dafad2f25.webp" alt="HSC-image" />
+        </div>
+        
+    </section>
+    <section class="ssc-ranker-section">
+        <div class="ranker-year">
+            SYJC-SCIENCE Rankers Year(2026-27)
+        </div>
+        <hr class="hr">
+        <div class="ssc-ranker-container">
+        <div class="ranker-box">
+            <div class="ranker-image-box scroll">
+                <div class="ranker-image-bg">
+                    <img class="ranker-image" src="images/ranker.jpg" alt="" />
+                    </div>
+                    <h3 class="ranker-name">??? ??? ???</h3>
+                    <p class="ranker-percentage">???</p>
+            </div>
+            <div class="ranker-image-box scroll">      <div class="ranker-image-bg">
+                    <img class="ranker-image" src="images/ranker.jpg" alt="" />
+                    </div>
+                    <h3 class="ranker-name">??? ??? ???</h3>
+                    <p class="ranker-percentage">???</p>
+            </div>
+            <div class="ranker-image-box scroll">      <div class="ranker-image-bg">
+                    <img class="ranker-image" src="images/ranker.jpg" alt="" />
+                    </div>
+                    <h3 class="ranker-name">??? ??? ???</h3>
+                    <p class="ranker-percentage">???</p>
+            </div>
+        </div>
+        </div>
+    </section>
+        <section class="detail-section">
+            <div class="detail-container scroll-1">
+                <div class="detail-box ">
+                    <h1 class="h-detail-text">85</h1>
+                    <p class="p-detail-text">Teachers</p>
+                </div>
+                <div class="detail-box">
+                    <h1 class="h-detail-text">45</h1>
+                    <p class="p-detail-text">classroom</p>
+                </div>
+                <div class="detail-box">
+                    <h1 class="h-detail-text">5000</h1>
+                    <p class="p-detail-text">Students</p>
+                </div>
+                <div class="detail-box">
+                    <h1 class="h-detail-text">4</h1>
+                    <p class="p-detail-text">Courses</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-text">
+                <h2 class="h-text-footer">About Us</h2>
+                <p class="p-text-footer">
+        Mother Teressa High School & Junior College is committed to 
+        providing quality education with moral values, discipline 
+        and modern learning techniques.
+              </p>
+            </div>
+            <div class="footer-text">
+                <h2 class="h-text-footer">Quick Links</h2>
+              <a href="index.html" class="a-footer">Home</a>
+              <a href="history.html" class="a-footer">About Us</a>
+              <a href="course" class="a-footer">Courses</a>
+              <a href="activity.html" class="a-footer">Activities</a>
+              <a href="contact.html" class="a-footer">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
